@@ -1,7 +1,11 @@
 
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo-8249611_640.png'
+import useAuth from '../utils/useAuth';
+import { MdOutlineLogout } from 'react-icons/md';
+import { TbUserPentagon } from 'react-icons/tb';
 const Header = () => {
+    const { user, logout } = useAuth();
     const navLinks = <>
 
 
@@ -11,7 +15,6 @@ const Header = () => {
 
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/about'}>About</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/contact'}>Contact</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/profile'}>Profile</NavLink>
 
 
 
@@ -47,11 +50,26 @@ const Header = () => {
                     {navLinks}
                 </div>
 
-                <div className="navbar-end">
+                {/* <div className="navbar-end">
 
                     <NavLink className={({ isActive }) => isActive ? 'btn btn-warning text-base font-bold text-white lg:mr-20 mr-12' : 'btn-ghost btn text-base font-bold text-white lg:mr-20'} to={'/login'}>Login</NavLink>
+                </div> */}
+                <div className='navbar-end'>
+
+                    {
+                        user?.email ? <NavLink className={({ isActive }) => isActive ? 'font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/profile'}><button className='btn btn-outline btn-info lg:mr-10 text-3xl'><TbUserPentagon /></button></NavLink> :
+                            (<NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-info hidden' : 'btn btn-outline btn-info hidden'} to={'/profile'}>Profile</NavLink>)
+                    };
+                    {
+                        user?.email ? <button onClick={logout} className='btn btn-secondary lg:mr-10 text-2xl'><MdOutlineLogout /></button> :
+                            (<NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-info' : 'btn btn-outline btn-info'} to={'/login'}>Login</NavLink>)
+                    }
                 </div>
+
+
             </div>
+
+
 
         </div>
     );
