@@ -3,9 +3,12 @@ import useAuth from "../utils/useAuth";
 
 
 const PrivateRoute = ({ children }) => {
-    const { user } = useAuth();
+    const { user, isLoading } = useAuth();
 
-    if (!user?.email) {
+    if (isLoading) {
+        return <span className="loading loading-spinner text-error"></span>;
+    }
+    if (!isLoading && !user?.email) {
         return <Navigate to={'/login'} />;
 
     }

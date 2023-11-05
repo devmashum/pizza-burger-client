@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../utils/useAuth";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const [email, setEmail] = useState();
@@ -22,9 +23,23 @@ const Login = () => {
             await login(email, password);
             toast.success('logged in...', { id: toastId });
             navigate('/');
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Successfully Logged In',
+                showConfirmButton: false,
+                timer: 2000
+            })
         }
         catch (err) {
             toast.error(err.message, { id: toastId });
+            Swal.fire({
+                position: 'top-center',
+                icon: 'warning',
+                title: 'Invalid User Data! Try Again',
+                showConfirmButton: false,
+                timer: 2000
+            })
         }
     }
 

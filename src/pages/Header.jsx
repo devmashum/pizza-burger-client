@@ -50,22 +50,10 @@ const Header = () => {
                     {navLinks}
                 </div>
 
-                {/* <div className="navbar-end">
 
-                    <NavLink className={({ isActive }) => isActive ? 'btn btn-warning text-base font-bold text-white lg:mr-20 mr-12' : 'btn-ghost btn text-base font-bold text-white lg:mr-20'} to={'/login'}>Login</NavLink>
-                </div> */}
                 <div className='navbar-end'>
 
-                    {/* {
-                        user?.email ? <NavLink className={({ isActive }) => isActive ? 'font-bold text-white dropdown' : 'btn-ghost btn text-base font-bold text-white'} to={'/profile'}><button className='btn btn-outline btn-info lg:mr-10 text-3xl'><TbUserPentagon /></button></NavLink> :
-                            (<NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-info hidden' : 'btn btn-outline btn-info hidden'} to={'/profile'}>Profile</NavLink>)
 
-                    }; */}
-                    {/* {
-                        user?.email ? <NavLink className={({ isActive }) => isActive ? 'font-bold text-white dropdown' : 'btn-ghost btn text-base font-bold text-white'} ><button tabIndex={0} className='btn btn-outline btn-info lg:mr-10 text-3xl'><TbUserPentagon /></button></NavLink> :
-                            (<NavLink className={({ isActive }) => isActive ? 'btn btn-outline btn-info hidden' : 'btn btn-outline btn-info hidden'} >Profile</NavLink>)
-
-                    }; */}
                     <div className="dropdown mr-2">
                         <label tabIndex={0} className="">
                             {
@@ -77,11 +65,11 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1]  shadow bg-slate-800 text-white rounded-box w-40 lg:w-52 ">
 
                             <li>
-                                <a><Link to={'/additems'}>Add a food item</Link></a>
+                                <Link to={'/additems'}>Add a food item</Link>
                                 <hr />
-                                <a><Link to={'/addeditems'}>My added food items</Link></a>
+                                <Link to={'/addeditems'}>My added food items</Link>
                                 <hr />
-                                <a><Link to={'/ordereditems'}>My ordered food items</Link></a>
+                                <Link to={'/ordereditems'}>My ordered food items</Link>
 
                             </li>
 

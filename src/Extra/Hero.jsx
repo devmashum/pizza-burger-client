@@ -11,7 +11,7 @@ const Hero = () => {
                 </div>
                 <div className='p-10'>
                     <h1 className="text-5xl font-bold">We Deliver the Taste of Life</h1>
-                    <p className="py-6">Get it Deliver Right to Your.</p>
+                    <p className="py-6">Get it Deliver Right to Your Door!</p>
                     <div className='flex'>
                         <input type="text" placeholder="Search here..." className="input input-bordered input-success w-10/12" />
                         <button className='btn btn-primary'>Search</button>
