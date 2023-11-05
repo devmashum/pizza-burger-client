@@ -14,13 +14,13 @@ import About from './pages/About';
 import AllFoodItems from './pages/AllFoodItems';
 import UserProfile from './users/UserProfile';
 import Login from './users/Login';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-
-
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -54,6 +54,7 @@ const router = createBrowserRouter([
     ],
 
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
