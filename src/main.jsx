@@ -17,6 +17,10 @@ import Login from './users/Login';
 import Error from './pages/Error';
 import AuthProvider from './providers/AuthProvider';
 import Register from './users/Register';
+import PrivateRoute from './routes/PrivateRoute';
+import AddItems from './users/AddItems';
+import AddedItems from './users/AddedItems';
+import OrderedItems from './users/OrderedItems';
 
 const router = createBrowserRouter([
   {
@@ -42,11 +46,27 @@ const router = createBrowserRouter([
       },
       {
         path: 'allfooditems',
-        element: <AllFoodItems></AllFoodItems>
+        element: <PrivateRoute><AllFoodItems></AllFoodItems></PrivateRoute>
       },
       {
         path: 'profile',
-        element: <UserProfile></UserProfile>
+        element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>,
+
+      },
+      {
+        path: '/additems',
+        element: <AddItems></AddItems>
+
+      },
+      {
+        path: '/addeditems',
+        element: <AddedItems></AddedItems>
+
+      },
+      {
+        path: '/ordereditems',
+        element: <OrderedItems></OrderedItems>
+
       },
       {
         path: 'login',

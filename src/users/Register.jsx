@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../utils/useAuth';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -17,9 +18,23 @@ const Register = () => {
         try {
             await createUser(email, password, name, photo);
             console.log('created');
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Thanks for Your Registration',
+                showConfirmButton: false,
+                timer: 2500
+            })
         }
         catch (err) {
             console.log(err)
+            Swal.fire({
+                position: 'top-center',
+                icon: 'warning',
+                title: 'You have already an account',
+                showConfirmButton: false,
+                timer: 2500
+            })
         }
     }
     return (
