@@ -58,12 +58,14 @@ const router = createBrowserRouter([
       },
       {
         path: '/additems',
-        element: <PrivateRoute><AddItems></AddItems></PrivateRoute>
+        element: <PrivateRoute><AddItems></AddItems></PrivateRoute>,
+
 
       },
       {
         path: '/addeditems',
-        element: <AddedItems></AddedItems>
+        element: <AddedItems></AddedItems>,
+        loader: () => fetch('http://localhost:3000/additems'),
 
       },
       {
