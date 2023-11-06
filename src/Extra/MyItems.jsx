@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const MyItems = ({ myItems }) => {
+const MyItems = ({ myItems, items, setItems }) => {
     const { _id, foodname, email, category, price, quantity, image, origin, description } = myItems;
 
     const handleDelete = (_id) => {
@@ -30,6 +31,8 @@ const MyItems = ({ myItems }) => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
+                            const remainigItems = items.filter(item => item._id !== _id);
+                            setItems(remainigItems);
                         }
                     })
             }
@@ -72,7 +75,7 @@ const MyItems = ({ myItems }) => {
                             <td className='w-1/3'>Price ${price}</td>
 
                             <th className='w-1/3'>
-                                <button className="btn">Update</button>
+                                <Link to={`/updateditems/${_id}`}><button className="btn">Update</button></Link>
                             </th>
                         </div>
 

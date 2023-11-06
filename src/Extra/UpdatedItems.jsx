@@ -1,10 +1,13 @@
-import Swal from 'sweetalert2';
-import useAuth from '../utils/useAuth';
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const AddItems = () => {
-    const { user } = useAuth();
 
-    const handleAddItems = event => {
+const UpdatedItems = () => {
+    const updateItems = useLoaderData();
+    const { _id, foodname, email, category, price, quantity, image, origin, description } = updateItems;
+
+
+    const handleUpdateItems = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -18,16 +21,18 @@ const AddItems = () => {
         const origin = form.origin.value;
         const description = form.description.value;
 
-        const newItems = { foodname, email, category, price, quantity, image, origin, description };
-        fetch('http://localhost:3000/additems', {
-            method: 'POST',
+        const updatedItems = { foodname, email, category, price, quantity, image, origin, description };
+        console.log(updatedItems)
+
+        fetch(`http://localhost:3000/additems/${_id}`, {
+            method: 'PUT',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(newItems)
+            body: JSON.stringify(updatedItems)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.insertedId) {
+                if (data.modifiedCount > 0) {
                     const Toast = Swal.mixin({
                         toast: true,
                         position: 'top-end',
@@ -42,73 +47,72 @@ const AddItems = () => {
 
                     Toast.fire({
                         icon: 'success',
-                        title: 'Item add successfully!'
+                        title: 'Item updated successfully!'
                     })
                 }
             })
     }
-
     return (
-        <div className="bg-base-200 ">
-            <div className="hero-content flex-col w-9/12 mx-auto">
+        <div className="bg-base-200">
+            <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Add a new item</h1>
                 </div>
                 <div className="w-full shadow-2xl bg-base-100">
-                    <form onSubmit={handleAddItems} className="card-body">
+                    <form onSubmit={handleUpdateItems} className="card-body">
                         <div className='grid grid-cols-2 gap-5 '>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Food Name</span>
                                 </label>
-                                <input name="foodname" type="text" placeholder="Food Name" className="input input-bordered" />
+                                <input name="foodname" type="text" defaultValue={foodname} placeholder="Food Name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Food Image</span>
                                 </label>
-                                <input name="image" type="text" placeholder="Image" className="input input-bordered" />
+                                <input name="image" type="text" defaultValue={image} placeholder="Image" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Food Category</span>
                                 </label>
-                                <input name="category" type="text" placeholder="Category" className="input input-bordered" />
+                                <input name="category" type="text" defaultValue={category} placeholder="Category" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Quantity</span>
                                 </label>
-                                <input name="quantity" type="text" placeholder="Quantity" className="input input-bordered" />
+                                <input name="quantity" type="text" defaultValue={quantity} placeholder="Quantity" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Origin</span>
                                 </label>
-                                <input name="origin" type="text" placeholder="Origin" className="input input-bordered" />
+                                <input name="origin" type="text" defaultValue={origin} placeholder="Origin" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input name="price" type="text" placeholder="Price" className="input input-bordered" />
+                                <input name="price" type="text" defaultValue={price} placeholder="Price" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name="email" defaultValue={user.email} type="email" className="input input-bordered" />
+                                <input name="email" defaultValue={email} type="email" className="input input-bordered" />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Description</span>
                                 </label>
-                                <input name="description" type="text" className="input input-bordered" />
+                                <input name="description" type="text" defaultValue={description} className="input input-bordered" />
                             </div>
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">Submit Item</button>
+                            <button type="submit" className="btn btn-primary">Update Item</button>
                         </div>
                     </form>
                 </div>
@@ -117,4 +121,4 @@ const AddItems = () => {
     );
 };
 
-export default AddItems;
+export default UpdatedItems;

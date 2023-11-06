@@ -21,6 +21,8 @@ import PrivateRoute from './routes/PrivateRoute';
 import AddItems from './users/AddItems';
 import AddedItems from './users/AddedItems';
 import OrderedItems from './users/OrderedItems';
+import UpdatedItems from './Extra/UpdatedItems';
+import ShowSingleProduct from './Extra/ShowSingleProduct';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +68,17 @@ const router = createBrowserRouter([
         path: '/addeditems',
         element: <AddedItems></AddedItems>,
         loader: () => fetch('http://localhost:3000/additems'),
+
+      },
+      {
+        path: '/singleproduct/:id',
+        element: <ShowSingleProduct></ShowSingleProduct>,
+        loader: ({ params }) => fetch(`http://localhost:3000/allfoods/${params.id}`),
+      },
+      {
+        path: '/updateditems/:id',
+        element: <UpdatedItems></UpdatedItems>,
+        loader: ({ params }) => fetch(`http://localhost:3000/additems/${params.id}`),
 
       },
       {
