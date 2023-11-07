@@ -64,7 +64,7 @@ const Footer = () => {
 
             </footer>
             <div className='py-5 text-center bg-neutral text-white'>
-                <h1>© 2023 YAM YAM Berlin. All Rights Reserved. Designed and Develop with <span className='flex items-center justify-center  btn-outline btn-error text-4xl'><GiLoveHowl /></span> by <span className='font-extrabold'>Faisal</span></h1>
+                <h1>© 2023 YAM YAM Berlin. All Rights Reserved. Designed and Developed with <span className='flex items-center justify-center  btn-outline btn-error text-4xl'><GiLoveHowl /></span> by <span className='font-extrabold'><a className='hover-link' href="">Faisal</a></span></h1>
             </div>
         </div>
     );
