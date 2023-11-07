@@ -49,12 +49,12 @@ const AddItems = () => {
     }
 
     return (
-        <div className="bg-base-200 ">
+        <div className="bg-base-200 pb-10">
             <div className="hero-content flex-col w-9/12 mx-auto">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Add a new item</h1>
                 </div>
-                <div className="w-full shadow-2xl bg-base-100">
+                <div className="w-full rounded-xl shadow-2xl bg-base-100">
                     <form onSubmit={handleAddItems} className="card-body">
                         <div className='grid grid-cols-2 gap-5 '>
                             <div className="form-control">

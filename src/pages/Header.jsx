@@ -65,11 +65,14 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1]  shadow bg-slate-800 text-white rounded-box w-40 lg:w-52 ">
 
                             <li>
-                                <Link to={'/additems'}>Add a food item</Link>
+                                <Link to={'/additems'}>Add Food Item</Link>
                                 <hr />
-                                <Link to={'/addeditems'}>My added food items</Link>
+                                <Link to={'/addeditems'}>My Added Food Items</Link>
                                 <hr />
-                                <Link to={'/mycart'}>My ordered food items</Link>
+                                <Link to={'/mycart'}>My Ordered Food Items</Link>
+                                <hr />
+                                <Link to={'purchasepage'}>Food Purchase Page</Link>
+
 
                             </li>
 

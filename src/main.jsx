@@ -24,6 +24,8 @@ import OrderedItems from './users/OrderedItems';
 import UpdatedItems from './Extra/UpdatedItems';
 import ShowSingleProduct from './Extra/ShowSingleProduct';
 import MyCart from './pages/MyCart';
+import PurchasePage from './pages/PurchasePage';
+
 
 const router = createBrowserRouter([
   {
@@ -93,6 +95,11 @@ const router = createBrowserRouter([
 
       },
       {
+        path: '/purchasepage',
+        element: <PurchasePage></PurchasePage>,
+        // loader: () => fetch('http://localhost:3000/itemList')
+      },
+      {
         path: 'login',
         element: <Login></Login>
       },
@@ -100,7 +107,6 @@ const router = createBrowserRouter([
         path: 'register',
         element: <Register></Register>
       },
-
     ],
 
   },

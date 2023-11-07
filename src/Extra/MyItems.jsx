@@ -31,8 +31,8 @@ const MyItems = ({ myItems, items, setItems }) => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
-                            const remainigItems = items.filter(item => item._id !== _id);
-                            setItems(remainigItems);
+                            // const remainigItems = items.filter(item => item._id !== _id);
+                            // setItems(remainigItems);
                         }
                     })
             }
