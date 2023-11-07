@@ -3,7 +3,7 @@ import contact from '../assets/images/contact.jpg'
 const Contact = () => {
     return (
         <div>
-            <img className='w-full h-[300px]' src={contact} alt="" />
+            <img className='w-full h-[350px] object-cover object-bottom ' src={contact} alt="" />
             <div className='lg:flex justify-center items-center lg:p-10'>
 
                 <div className='lg:w-[50%] lg:p-20 mt-5'>

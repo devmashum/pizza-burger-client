@@ -69,7 +69,7 @@ const Header = () => {
                                 <hr />
                                 <Link to={'/addeditems'}>My added food items</Link>
                                 <hr />
-                                <Link to={'/ordereditems'}>My ordered food items</Link>
+                                <Link to={'/mycart'}>My ordered food items</Link>
 
                             </li>
 

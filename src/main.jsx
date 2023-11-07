@@ -23,6 +23,7 @@ import AddedItems from './users/AddedItems';
 import OrderedItems from './users/OrderedItems';
 import UpdatedItems from './Extra/UpdatedItems';
 import ShowSingleProduct from './Extra/ShowSingleProduct';
+import MyCart from './pages/MyCart';
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,11 @@ const router = createBrowserRouter([
         element: <UpdatedItems></UpdatedItems>,
         loader: ({ params }) => fetch(`http://localhost:3000/additems/${params.id}`),
 
+      },
+      {
+        path: '/mycart',
+        element: <MyCart></MyCart>,
+        loader: () => fetch('http://localhost:3000/mycart'),
       },
       {
         path: '/ordereditems',
