@@ -26,6 +26,9 @@ import ShowSingleProduct from './Extra/ShowSingleProduct';
 import MyCart from './pages/MyCart';
 import PurchasePage from './pages/PurchasePage';
 
+import PopularDishes from './Extra/PopularDishes';
+import Card from './Extra/Card';
+
 
 const router = createBrowserRouter([
   {
@@ -53,8 +56,11 @@ const router = createBrowserRouter([
         path: 'allfooditems',
         element: <AllFoodItems></AllFoodItems>,
         loader: () => fetch('http://localhost:3000/allfoods'),
-
-
+      },
+      {
+        path: '/card',
+        element: <Card></Card>,
+        loader: () => fetch('http://localhost:3000/card'),
       },
       {
         path: 'profile',
@@ -78,6 +84,7 @@ const router = createBrowserRouter([
         element: <ShowSingleProduct></ShowSingleProduct>,
         loader: ({ params }) => fetch(`http://localhost:3000/allfoods/${params.id}`),
       },
+
       {
         path: '/updateditems/:id',
         element: <UpdatedItems></UpdatedItems>,
@@ -99,6 +106,7 @@ const router = createBrowserRouter([
         element: <PurchasePage></PurchasePage>,
         // loader: () => fetch('http://localhost:3000/itemList')
       },
+
       {
         path: 'login',
         element: <Login></Login>

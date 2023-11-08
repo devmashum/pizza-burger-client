@@ -2,7 +2,7 @@
 import { useLoaderData } from 'react-router-dom';
 import img1 from '../assets/images/p1.jpg'
 import Food from '../Extra/Food';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './AllFoodItems.css'
 
 
@@ -11,7 +11,7 @@ const AllFoodItems = () => {
     const foods = useLoaderData();
     // 
     const [filteredData, setFilteredData] = useState(foods);
-    const [itemsPerPage, setItemsPerPage] = useState(10);
+    const [itemsPerPage, setItemsPerPage] = useState(8);
     const [currentPage, setCurrentPage] = useState(0);
     // Pagination
     const covertToNumber = foods.length;
@@ -37,6 +37,15 @@ const AllFoodItems = () => {
             setCurrentPage(currentPage + 1)
         }
     }
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/allfoods?page=${currentPage}&size=${itemsPerPage}`)
+            .then(res => res.json())
+            .then(data => setFilteredData(data))
+    }, [currentPage, itemsPerPage])
+
+
+
     //     const search = (e) => {
     //         setFilteredData(foods.filter((item) => item.food_name.toLowerCase().includes(e.target.value.toLowerCase())));
     // }
