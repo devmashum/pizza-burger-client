@@ -108,7 +108,7 @@ const AddItems = () => {
                             </div>
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">Submit Item</button>
+                            <button type="submit" className="btn btn-primary">Add Item</button>
                         </div>
                     </form>
                 </div>

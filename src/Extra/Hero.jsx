@@ -1,5 +1,3 @@
-import img1 from '../assets/images/6.jpg'
-
 
 const Hero = () => {
 
@@ -18,4 +16,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Hero; 

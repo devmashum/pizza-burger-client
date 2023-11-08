@@ -41,7 +41,7 @@ const ShowSingleProduct = () => {
 
 
         <div>
-            <div className=" mb-5">
+            <div className=" my-5">
                 <figure><img className="w-full h-80 object-cover mx-auto" src={img} /></figure>
                 <div className="card-body text-center">
                     <h2 className=" text-center text-3xl font-extrabold">{food_name}</h2>
@@ -55,6 +55,9 @@ const ShowSingleProduct = () => {
                     </div>
                 </div>
             </div>
+            {
+
+            }
 
 
         </div>

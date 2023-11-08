@@ -18,6 +18,7 @@ const Food = ({ food }) => {
                     <Link to={`/singleproduct/${_id}`}
                     >  <button className="btn mx-auto">Show Details</button></Link>
                 </div>
+
             </div>
         </div>
     );
