@@ -1,23 +1,18 @@
-import contact from '../assets/images/contact.jpg'
 
-const Contact = () => {
+import img5 from '../assets/images/footer.jpg'
+const Resarvation = () => {
     return (
-        <div>
-            <img className='w-full h-[350px] object-cover object-bottom ' src={contact} alt="" />
-            <div className='lg:flex justify-center items-center lg:p-10'>
+        <div className='lg:flex justify-center items-center pt-10 gap-10 pb-10'>
+            <div>
+                <img className='rounded-2xl w-full mb-5 pb-5 shadow-2xl bg-yellow-600' src={img5} alt="" />
+            </div>
+            <div>
+                <div className=''>
 
-                <div className='lg:w-[50%] lg:p-20 mt-5'>
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-extrabold">YAM YAM Berlin</h1>
-                        <p className="text-xl font-bold mt-5">Schönhauser Alle 3</p>
-                        <p >15204 Berlin</p>
-                        <p className='mt-3'>Telephone: 03301 61 34 30</p>
-                        <p >E-mail: info@yamyam.com</p>
-                    </div>
-                </div>
-                <div className='lg:w-[50%]'>
-                    <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full] shadow-2xl bg-base-100">
+
                         <form className="card-body">
+                            <h1 className='text-2xl font-bold'>Make a reservation</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -36,6 +31,28 @@ const Contact = () => {
                                 </label>
                                 <input type="number" placeholder="Phone" className="input input-bordered" required />
                             </div>
+
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Date</span>
+                                </label>
+                                <input type="date" placeholder="Phone" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Time</span>
+                                </label>
+                                <input type="time" placeholder="write your message" className="input input-bordered" required />
+
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Number of people</span>
+                                </label>
+                                <input type="number" placeholder="Number of People" className="input input-bordered" required />
+
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Your Message</span>
@@ -51,9 +68,8 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
 
-export default Contact;
+export default Resarvation;

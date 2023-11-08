@@ -4,9 +4,11 @@ import img2 from '../assets/images/member2.png'
 import img3 from '../assets/images/member3.png'
 import img4 from '../assets/images/member4.png'
 
+import Resarvation from '../pages/Resarvation'
+
 const PostAndArticles = () => {
     return (
-        <div>
+        <div className='bg-base-200 '>
             <div>
                 <h1 className='text-5xl text-center font-bold py-20'>Our Happy Clients Say</h1>
             </div>
@@ -79,6 +81,8 @@ const PostAndArticles = () => {
                     </div>
                 </div>
             </div>
+
+            <Resarvation></Resarvation>
         </div>
     );
 };

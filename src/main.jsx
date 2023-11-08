@@ -28,6 +28,7 @@ import PurchasePage from './pages/PurchasePage';
 
 import PopularDishes from './Extra/PopularDishes';
 import Card from './Extra/Card';
+import Resarvation from './pages/Resarvation';
 
 
 const router = createBrowserRouter([
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddItems></AddItems></PrivateRoute>,
 
 
+      },
+      {
+        path: '/reservation',
+        element: <Resarvation></Resarvation>
       },
       {
         path: '/addeditems',

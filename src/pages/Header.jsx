@@ -13,7 +13,7 @@ const Header = () => {
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/allfooditems'}>All Foods</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/blog'}>Blog</NavLink>
 
-        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/about'}>About</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/reservation'}>Reservation</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'btn btn-primary text-base font-bold text-white' : 'btn-ghost btn text-base font-bold text-white'} to={'/contact'}>Contact</NavLink>
 
 
