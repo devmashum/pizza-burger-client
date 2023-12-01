@@ -19,7 +19,7 @@ const AddItems = () => {
         const description = form.description.value;
 
         const newItems = { foodname, email, category, price, quantity, image, origin, description };
-        fetch('http://localhost:3000/additems', {
+        fetch('https://pizza-burger-server.vercel.app/additems', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newItems)
@@ -97,7 +97,7 @@ const AddItems = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name="email" defaultValue={user.email} type="email" className="input input-bordered" />
+                                <input name="email" defaultValue={user?.email} type="email" className="input input-bordered" />
                             </div>
 
                             <div className="form-control">

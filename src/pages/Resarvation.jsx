@@ -2,16 +2,16 @@
 import img5 from '../assets/images/footer.jpg'
 const Resarvation = () => {
     return (
-        <div className='lg:flex justify-center items-center pt-10 gap-10 pb-10'>
+        <div className='lg:flex justify-center items-center lg:pt-10 gap-10 pb-10 bg-base-200'>
             <div>
-                <img className='rounded-2xl w-full mb-5 pb-5 shadow-2xl bg-yellow-600' src={img5} alt="" />
+                <img className='lg:rounded-2xl w-full mb-5 pb-5  bg-yellow-600' src={img5} alt="" />
             </div>
             <div>
-                <div className=''>
+                <div className='p-5'>
 
                     <div className="card flex-shrink-0 w-full] shadow-2xl bg-base-100">
 
-                        <form className="card-body">
+                        <form className="card-body ">
                             <h1 className='text-2xl font-bold'>Make a reservation</h1>
                             <div className="form-control">
                                 <label className="label">

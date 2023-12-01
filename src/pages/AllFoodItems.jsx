@@ -13,6 +13,7 @@ const AllFoodItems = () => {
     const [filteredData, setFilteredData] = useState(foods);
     const [itemsPerPage, setItemsPerPage] = useState(8);
     const [currentPage, setCurrentPage] = useState(0);
+
     // Pagination
     const covertToNumber = foods.length;
 
@@ -39,7 +40,7 @@ const AllFoodItems = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:3000/allfoods?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://pizza-burger-server.vercel.app/allfoods?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => setFilteredData(data))
     }, [currentPage, itemsPerPage])
@@ -53,7 +54,7 @@ const AllFoodItems = () => {
     // Filter with name, category and price
     const search = (e) => {
         const searchTerm = e.target.value.toLowerCase();
-        setFilteredData(foods.filter((item) =>
+        setFilteredData(foods?.filter((item) =>
             item.food_name.toLowerCase().includes(searchTerm) ||
             item.category.toLowerCase().includes(searchTerm) ||
             item.price.toString().includes(searchTerm)
@@ -84,14 +85,14 @@ const AllFoodItems = () => {
 
             <div className='lg:grid grid-cols-4 gap-3 lg:gap-5 p-10'>
                 {
-                    filteredData.map(food => <Food key={food._id} food={food}></Food>)
+                    filteredData?.map(food => <Food key={food._id} food={food}></Food>)
                 }
             </div>
             <div className='pagination'>
                 <p>currentPage: {currentPage}</p>
                 <button onClick={handlePriviousPage}>Previous</button>
                 {
-                    pages.map(page => <button onClick={() => setCurrentPage(page)} className={currentPage == page && 'selected btn'} key={page} >{page}</button>)
+                    pages?.map(page => <button onClick={() => setCurrentPage(page)} className={currentPage == page && 'selected btn'} key={page} >{page}</button>)
 
                 }
                 <button onClick={handleNextPage}>Next</button>

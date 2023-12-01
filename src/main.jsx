@@ -25,8 +25,6 @@ import UpdatedItems from './Extra/UpdatedItems';
 import ShowSingleProduct from './Extra/ShowSingleProduct';
 import MyCart from './pages/MyCart';
 import PurchasePage from './pages/PurchasePage';
-
-import PopularDishes from './Extra/PopularDishes';
 import Card from './Extra/Card';
 import Resarvation from './pages/Resarvation';
 
@@ -56,12 +54,12 @@ const router = createBrowserRouter([
       {
         path: 'allfooditems',
         element: <AllFoodItems></AllFoodItems>,
-        loader: () => fetch('http://localhost:3000/allfoods'),
+        loader: () => fetch('https://pizza-burger-server.vercel.app/allfoods'),
       },
       {
         path: '/card',
         element: <Card></Card>,
-        loader: () => fetch('http://localhost:3000/card'),
+        loader: () => fetch('https://pizza-burger-server.vercel.app/card'),
       },
       {
         path: 'profile',
@@ -81,25 +79,25 @@ const router = createBrowserRouter([
       {
         path: '/addeditems',
         element: <AddedItems></AddedItems>,
-        loader: () => fetch('http://localhost:3000/additems'),
+        loader: () => fetch('https://pizza-burger-server.vercel.app/additems'),
 
       },
       {
         path: '/singleproduct/:id',
         element: <ShowSingleProduct></ShowSingleProduct>,
-        loader: ({ params }) => fetch(`http://localhost:3000/allfoods/${params.id}`),
+        loader: ({ params }) => fetch(`https://pizza-burger-server.vercel.app/allfoods/${params.id}`),
       },
 
       {
         path: '/updateditems/:id',
         element: <UpdatedItems></UpdatedItems>,
-        loader: ({ params }) => fetch(`http://localhost:3000/additems/${params.id}`),
+        loader: ({ params }) => fetch(`https://pizza-burger-server.vercel.app/additems/${params.id}`),
 
       },
       {
         path: '/mycart',
         element: <MyCart></MyCart>,
-        loader: () => fetch('http://localhost:3000/mycart'),
+        loader: () => fetch('https://pizza-burger-server.vercel.app/mycart'),
       },
       {
         path: '/ordereditems',
@@ -109,7 +107,7 @@ const router = createBrowserRouter([
       {
         path: '/purchasepage',
         element: <PurchasePage></PurchasePage>,
-        // loader: () => fetch('http://localhost:3000/itemList')
+        // loader: () => fetch('https://pizza-burger-server.vercel.app/itemList')
       },
 
       {

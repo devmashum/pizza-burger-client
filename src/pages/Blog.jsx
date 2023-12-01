@@ -35,7 +35,7 @@ const Blog = () => {
                         Different between MongoDB database vs mySQL database?
                     </div>
                     <div className="collapse-content">
-                        <p>MongoDB and MySQL are both popular database management systems, but they differ in several fundamental ways. Here's a comparison of MongoDB and MySQL in various aspects:
+                        {/* <p>MongoDB and MySQL are both popular database management systems, but they differ in several fundamental ways. Here's a comparison of MongoDB and MySQL in various aspects:
 
                             Database Type:
 
@@ -59,7 +59,7 @@ const Blog = () => {
 
                             MongoDB: MongoDB is designed to be horizontally scalable. It can handle large amounts of data and traffic by distributing data across multiple servers in a cluster.
 
-                            MySQL: MySQL can be scaled vertically (by adding more resources to a single server) or through replication and clustering, but horizontal scalability is not as straightforward as it is with MongoDB.</p>
+                            MySQL: MySQL can be scaled vertically (by adding more resources to a single server) or through replication and clustering, but horizontal scalability is not as straightforward as it is with MongoDB.</p> */}
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ const UpdatedItems = () => {
         const updatedItems = { foodname, email, category, price, quantity, image, origin, description };
         console.log(updatedItems)
 
-        fetch(`http://localhost:3000/additems/${_id}`, {
+        fetch(`https://pizza-burger-server.vercel.app/additems/${_id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updatedItems)
@@ -53,12 +53,12 @@ const UpdatedItems = () => {
             })
     }
     return (
-        <div className="bg-base-200">
-            <div className="hero-content flex-col">
+        <div className="bg-base-200 w-full max-auto">
+            <div className="hero-content w-full mx-auto  flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Add a new item</h1>
+                    <h1 className="text-5xl font-bold">Update this item</h1>
                 </div>
-                <div className="w-full shadow-2xl bg-base-100">
+                <div className="w-full shadow-2xl pb-5 rounded-xl bg-base-100">
                     <form onSubmit={handleUpdateItems} className="card-body">
                         <div className='grid grid-cols-2 gap-5 '>
                             <div className="form-control">

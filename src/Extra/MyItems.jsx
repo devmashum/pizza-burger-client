@@ -18,7 +18,7 @@ const MyItems = ({ myItems, items, setItems }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/additems/${_id}`, {
+                fetch(`https://pizza-burger-server.vercel.app/additems/${_id}`, {
                     method: 'DELETE',
 
                 })

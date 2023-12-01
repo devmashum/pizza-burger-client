@@ -15,7 +15,7 @@ const AddedItems = () => {
 
             <div>
                 {
-                    items.map(myItems => <MyItems key={myItems._id} myItems={myItems} items={items} setItems={setItems}></MyItems>)
+                    items?.map(myItems => <MyItems key={myItems._id} myItems={myItems} items={items} setItems={setItems}></MyItems>)
                 }
             </div>
 

@@ -23,7 +23,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd095'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd095'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>
@@ -37,7 +37,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd0a2'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd0a2'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>
@@ -51,7 +51,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd097'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd097'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>
@@ -65,7 +65,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd09a'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd09a'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>
@@ -79,7 +79,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd099'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd099'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>
@@ -93,7 +93,7 @@ const Card = () => {
                     </div>
                     <div className="card-actions justify-center h-[50%] mt-5">
 
-                        <Link to={'http://localhost:5173/singleproduct/654824a4ca0f3b85a16dd098'} > <button className="btn mx-auto">Show Details</button></Link>
+                        <Link to={'https://pizza-burger-bulls.web.app/singleproduct/654824a4ca0f3b85a16dd098'} > <button className="btn mx-auto">Show Details</button></Link>
                     </div>
 
                 </div>

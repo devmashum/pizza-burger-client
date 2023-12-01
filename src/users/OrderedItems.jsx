@@ -18,7 +18,7 @@ const OrderedItems = ({ orderedItem }) => {
             .then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:3000/mycart/${_id}`, {
+                    fetch(`https://pizza-burger-server.vercel.app/mycart/new/${_id}`, {
                         method: 'DELETE',
 
                     })
@@ -31,8 +31,7 @@ const OrderedItems = ({ orderedItem }) => {
                                     text: "Your file has been deleted.",
                                     icon: "success"
                                 })
-                                // const remainigItems = items.filter(item => item._id !== _id);
-                                // setItems(remainigItems);
+
                             }
                         })
                 }

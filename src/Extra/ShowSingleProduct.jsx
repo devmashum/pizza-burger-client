@@ -9,7 +9,7 @@ const ShowSingleProduct = () => {
 
     const handleAddToCart = (_id) => {
         console.log(_id)
-        fetch('http://localhost:3000/mycart', {
+        fetch('https://pizza-burger-server.vercel.app/mycart', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(singleItem)

@@ -23,7 +23,7 @@ const PurchasePage = () => {
 
         console.log(newList);
 
-        fetch('http://localhost:3000/itemlist', {
+        fetch('https://pizza-burger-server.vercel.app/itemlist', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newList)

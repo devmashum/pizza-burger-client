@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Hero = () => {
 
@@ -8,7 +9,9 @@ const Hero = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-extrabold">Double good news</h1>
                     <p className="mb-5 font-bold text-base">If you don't take a bite, you're missing out twice: the new Double Hamburger Royal TS and Double Hamburger Royal cheese. Only for a short time.</p>
-                    <button className="btn btn-primary">Try Now</button>
+
+                    <Link to={'https://pizza-burger-bulls.web.app/allfooditems'}><button className="btn btn-primary">Try Now</button></Link>
+
                 </div>
             </div>
         </div>

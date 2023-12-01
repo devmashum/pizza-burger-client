@@ -57,7 +57,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required
+                            <input type="email" placeholder="faisal@gmail.com" className="input input-bordered" required
                                 onBlur={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -65,7 +65,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" required
+                            <input type="password" placeholder="123456" className="input input-bordered" required
                                 onBlur={(e) => setPassword(e.target.value)} />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
